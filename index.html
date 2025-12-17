@@ -2,10 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Start Doing Things</title>
+    <meta name="description" content="Start Doing Things is a Substack about increasing individual agency by using AI—practical workflows, experiments, and projects.">
+    <meta name="theme-color" content="#0b1020">
+    <meta property="og:title" content="Start Doing Things">
+    <meta property="og:description" content="Increase your agency with AI. Practical workflows, experiments, and projects.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#top" aria-label="Start Doing Things, home">Start Doing Things</a>
+
+            <nav class="nav" aria-label="Primary">
+                <a href="#portfolio">Portfolio</a>
+                <a id="substack-link" href="https://startdoingthings.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="top">
+            <div class="container hero-inner">
+                <p class="eyebrow">Increase your agency with AI</p>
+                <h1>Start Doing Things</h1>
+                <p class="lead">
+                    A Substack (and build log) about turning intention into action using practical AI workflows.
+                </p>
+
+                <div class="cta-row">
+                    <a class="button primary" id="substack-cta" href="https://startdoingthings.substack.com" target="_blank" rel="noopener noreferrer">Read the Substack</a>
+                    <a class="button" href="#portfolio">View portfolio</a>
+                </div>
+
+                <dl class="stats" aria-label="Site focus areas">
+                    <div class="stat">
+                        <dt>Bias</dt>
+                        <dd>Small steps</dd>
+                    </div>
+                    <div class="stat">
+                        <dt>Output</dt>
+                        <dd>Shipped projects</dd>
+                    </div>
+                    <div class="stat">
+                        <dt>Topic</dt>
+                        <dd>AI + agency</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container columns">
+                <div>
+                    <h2>What this is</h2>
+                    <p>
+                        Start Doing Things is where I share workflows, experiments, and projects that help me move from
+                        “I should” to “it’s done” — with AI as a leverage multiplier.
+                    </p>
+                    <p class="muted">
+                        Expect pragmatic notes on prompts, systems, and decision-making, plus write-ups of what I’m building.
+                    </p>
+                </div>
+                <div>
+                    <h2>What you’ll find</h2>
+                    <ul class="list">
+                        <li>Playbooks for getting unstuck and shipping</li>
+                        <li>Agentic workflows that fit real life</li>
+                        <li>Tools and prototypes, with learnings</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Portfolio</h2>
+                        <p class="muted">Projects and experiments I’ve built (or am building).</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-controls">
+                    <label class="field">
+                        <span class="field-label">Search</span>
+                        <input id="project-search" type="search" inputmode="search" placeholder="Search projects…" autocomplete="off">
+                    </label>
+
+                    <div class="filter">
+                        <span class="field-label">Filter</span>
+                        <div class="tag-filters" id="tag-filters" role="group" aria-label="Project tag filters"></div>
+                    </div>
+                </div>
+
+                <div id="projects-grid" class="grid" aria-live="polite"></div>
+                <p id="projects-empty" class="muted hidden">No projects match your search yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-text">© <span id="year"></span> Start Doing Things</p>
+            <a class="footer-link" href="#top">Back to top</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
