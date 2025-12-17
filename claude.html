@@ -2,117 +2,194 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Start Doing Things</title>
-    <meta name="description" content="Start Doing Things is a Substack about increasing individual agency by using AI—practical workflows, experiments, and projects.">
-    <meta name="theme-color" content="#0b1020">
-    <meta property="og:title" content="Start Doing Things">
-    <meta property="og:description" content="Increase your agency with AI. Practical workflows, experiments, and projects.">
-    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Doing Things | Increase Your Agency with AI</title>
+    <meta name="description" content="A Substack about increasing individual agency by using AI. Learn to leverage AI tools to take action and build what matters.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="#top" aria-label="Start Doing Things, home">Start Doing Things</a>
-
-            <nav class="nav" aria-label="Primary">
-                <a href="#portfolio">Portfolio</a>
-                <a id="substack-link" href="https://startdoingthings.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">⚡</span>
+                Start Doing Things
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="https://startdoingthings.substack.com/" target="_blank" rel="noopener" class="nav-cta">Subscribe →</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <main id="main">
-        <section class="hero" id="top">
-            <div class="container hero-inner">
-                <p class="eyebrow">Increase your agency with AI</p>
-                <h1>Start Doing Things</h1>
-                <p class="lead">
-                    A Substack (and build log) about turning intention into action using practical AI workflows.
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    New essays every week
+                </div>
+                <h1 class="hero-title">
+                    Stop Waiting.<br>
+                    <span class="gradient-text">Start Doing Things.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A Substack about increasing your individual agency by leveraging AI. Learn to build, create, and take action on the ideas that matter to you.
                 </p>
-
-                <div class="cta-row">
-                    <a class="button primary" id="substack-cta" href="https://startdoingthings.substack.com" target="_blank" rel="noopener noreferrer">Read the Substack</a>
-                    <a class="button" href="#portfolio">View portfolio</a>
-                </div>
-
-                <dl class="stats" aria-label="Site focus areas">
-                    <div class="stat">
-                        <dt>Bias</dt>
-                        <dd>Small steps</dd>
-                    </div>
-                    <div class="stat">
-                        <dt>Output</dt>
-                        <dd>Shipped projects</dd>
-                    </div>
-                    <div class="stat">
-                        <dt>Topic</dt>
-                        <dd>AI + agency</dd>
-                    </div>
-                </dl>
-            </div>
-        </section>
-
-        <section class="content">
-            <div class="container columns">
-                <div>
-                    <h2>What this is</h2>
-                    <p>
-                        Start Doing Things is where I share workflows, experiments, and projects that help me move from
-                        “I should” to “it’s done” — with AI as a leverage multiplier.
-                    </p>
-                    <p class="muted">
-                        Expect pragmatic notes on prompts, systems, and decision-making, plus write-ups of what I’m building.
-                    </p>
-                </div>
-                <div>
-                    <h2>What you’ll find</h2>
-                    <ul class="list">
-                        <li>Playbooks for getting unstuck and shipping</li>
-                        <li>Agentic workflows that fit real life</li>
-                        <li>Tools and prototypes, with learnings</li>
-                    </ul>
+                <div class="hero-cta-group">
+                    <a href="https://startdoingthings.substack.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                        Subscribe to the Newsletter
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="portfolio.html" class="btn btn-secondary">
+                        View My Projects
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>Portfolio</h2>
-                        <p class="muted">Projects and experiments I’ve built (or am building).</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-controls">
-                    <label class="field">
-                        <span class="field-label">Search</span>
-                        <input id="project-search" type="search" inputmode="search" placeholder="Search projects…" autocomplete="off">
-                    </label>
-
-                    <div class="filter">
-                        <span class="field-label">Filter</span>
-                        <div class="tag-filters" id="tag-filters" role="group" aria-label="Project tag filters"></div>
-                    </div>
-                </div>
-
-                <div id="projects-grid" class="grid" aria-live="polite"></div>
-                <p id="projects-empty" class="muted hidden">No projects match your search yet.</p>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">What This Is About</span>
+                <h2 class="section-title">Agency Through <span class="gradient-text">AI</span></h2>
+                <p class="section-subtitle">
+                    AI isn't here to replace you—it's here to amplify what you can do. This newsletter explores how.
+                </p>
             </div>
-        </section>
-    </main>
+            
+            <div class="about-grid">
+                <div class="about-card animate-on-scroll">
+                    <div class="about-card-icon">🚀</div>
+                    <h3 class="about-card-title">Build Faster</h3>
+                    <p>Learn to use AI tools to prototype, iterate, and ship projects at speeds that were impossible before.</p>
+                </div>
+                <div class="about-card animate-on-scroll">
+                    <div class="about-card-icon">🧠</div>
+                    <h3 class="about-card-title">Think Bigger</h3>
+                    <p>Expand what you believe is possible. When AI handles the tedious work, you can focus on the vision.</p>
+                </div>
+                <div class="about-card animate-on-scroll">
+                    <div class="about-card-icon">⚡</div>
+                    <h3 class="about-card-title">Take Action</h3>
+                    <p>Practical frameworks and real examples to help you move from idea to execution, starting today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p class="footer-text">© <span id="year"></span> Start Doing Things</p>
-            <a class="footer-link" href="#top">Back to top</a>
+    <!-- Featured Projects Section -->
+    <section class="section" id="featured">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Things I've <span class="gradient-text">Built</span></h2>
+                <p class="section-subtitle">
+                    Real projects I've created using AI-assisted workflows. Each one is proof that you can build more than you think.
+                </p>
+            </div>
+            
+            <div class="featured-projects">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-card-image">🤖</div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">AI Writing Assistant</h3>
+                        <p class="project-card-description">A custom tool that helps draft, edit, and refine long-form content using multiple AI models.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OpenAI</span>
+                            <span class="project-tag">React</span>
+                        </div>
+                        <a href="portfolio.html" class="project-card-link">View Details →</a>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-card-image">📊</div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Data Dashboard Builder</h3>
+                        <p class="project-card-description">An automated system for generating interactive dashboards from raw data sources.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">D3.js</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                        <a href="portfolio.html" class="project-card-link">View Details →</a>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-card-image">🎨</div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Generative Art Explorer</h3>
+                        <p class="project-card-description">A creative platform for generating and curating AI-powered artwork and designs.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Stable Diffusion</span>
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">Tailwind</span>
+                        </div>
+                        <a href="portfolio.html" class="project-card-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: var(--spacing-2xl);" class="animate-on-scroll">
+                <a href="portfolio.html" class="btn btn-secondary">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--color-bg-secondary); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="section-header animate-on-scroll" style="margin-bottom: var(--spacing-xl);">
+                <h2 class="section-title">Ready to <span class="gradient-text">Start Doing</span>?</h2>
+                <p class="section-subtitle">
+                    Join the newsletter and get weekly essays on leveraging AI to increase your agency and build what matters.
+                </p>
+            </div>
+            <div style="text-align: center;" class="animate-on-scroll">
+                <a href="https://startdoingthings.substack.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                    Subscribe for Free
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Start Doing Things ⚡</div>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                    <li><a href="https://startdoingthings.substack.com/" target="_blank" rel="noopener" class="footer-link">Substack</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="https://startdoingthings.substack.com/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Substack">📧</a>
+                </div>
+                <p class="footer-copyright">© 2024 Start Doing Things. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js" defer></script>
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
